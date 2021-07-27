@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <script src="//assets.adobedtm.com/35066b6d6803/2e890e6a08ec/launch-4ce1fa97d6ed-development.min.js" async></script>
+  <!-- <script src="//assets.adobedtm.com/35066b6d6803/6bdde02ec9bf/launch-057e0434ec26-development.min.js" async></script> -->
+<title>Geometrixx Clothiers</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<script type="text/javascript" src="http://ats-sb.adobe.com/jjsite/include/scripts/menu.js"></script>
+<script type="text/javascript" src="http://ats-sb.adobe.com/jjsite/include/scripts/searchfield.js"></script> 
+<script type="text/javascript" src="http://ats-sb.adobe.com/jjsite/include/scripts/simpleCart.js"></script>
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script language="JavaScript" type="text/javascript">window.onunload=function(){void(0)}</script>
+<script language="JavaScript">
+// if (document.images) {pic1= new Image(200,70); pic1.src="http://ats-sb.adobe.com/jjsite/include/images/jj_logo_green.png";}
+
+window.onload = function(e){ 
+var userCookie = getCookie("username");
+if(userCookie.length>0){
+  window.location.href = "home.html";
+}
+};
+function loginClick(e,uname,password){
+
+if((uname === "demo1" && password === "demo123") || (uname === "demo2" && password === "demo234") || (uname === "demo3" && password === "demo345") || (uname === "demo4" && password === "demo456") || (uname === "demo5" && password === "demo567")){
+setCookie("username",uname,1);
+document.getElementById('login-error').style.display="none";
+window.location.href = "home.html";
+
+
+}else{
+
+document.getElementById('login-error').style.display="block";
+
+}
+e.preventDefault();
+  
+}
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 3600 * 1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + "; " + expires;
+}
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+    }
+    return "";
+}
+//setCookie("user_email","bobthegreat@gmail.com",30); //set "user_email" cookie, expires in 30 days
+//var userEmail=getCookie("user_email");//"bobthegreat@gmail.com"
+//console.log("userEmail",userEmail)
+</script>
+
+<style type="text/css">
+@import url(http://ats-sb.adobe.com/jjsite/include/css/jje.css);
+@import url(http://ats-sb.adobe.com/jjsite/include/css/menu.css);
+@import url(http://ats-sb.adobe.com/jjsite/include/css/searchfield.css); 
+@import url(https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css);
+</style> 	
+<link rel="shortcut icon" href="http://ats-sb.adobe.com/jjsite/include/images/jj1.ico">
+
+<style type="text/css">
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+   border-radius:10px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #F05A28;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+   display: inline-block;
+   border-radius:10px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+#login-error{
+display:none;
+}
+</style>
+</head>
+
+<body>
+
+<!--Adobe Analytics marketing reports & analytics -->
+<!-- <script language="JavaScript" type="text/javascript" src="AppMeasurement.js"></script> -->
+<!-- <script language="JavaScript" type="text/javascript">
+/*
+/* You may give each page an identifying name, server, and channel on
+the next lines. */
+s.pageName=""
+s.server=""
+s.channel=""
+s.pageType=""
+s.prop1=""
+s.prop2=""
+s.prop3=""
+s.prop4=""
+s.prop5=""
+s.hier1=""
+/* Conversion Variables */
+s.campaign=""
+s.state=""
+s.zip=""
+s.events=""
+s.products=""
+s.purchaseID=""
+s.transactionID=""
+s.eVar1=""
+s.eVar2=""
+s.eVar3=""
+s.eVar4=""
+s.eVar5=""
+var s_code=s.t();if(s_code)document.write(s_code)</script> -->
+
+
+<div id="superwrap">
+<div id="wrapper">
+<!--start logo and head-->
+
+
+
+  <div class="container p-5 w-75 mt-auto">
+  <h3 class="text-center">Login</h3>
+  <form onsubmit="loginClick(event,document.getElementById('uname').value,document.getElementById('password').value)">
+   <div class="pt-5"> <label for="uname"><b>Username</b></label>
+    <input type="text" id="uname" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" id="password" placeholder="Enter Password" name="psw" required>
+        
+   <div  style="text-align:center; margin-top:20px;"> <button class = "login" type="submit">Login</button></div>
+   <div id="login-error"><span class="text-danger">Username / Password is incorrect</span></div>
+	
+   </div>
+   </div>
+  </div>
+
+<!--start top nav-->
+
+<!----------------------><!--start page content--><!---------------------->
+</div>
+
+</div>
+</body>
+</html>
